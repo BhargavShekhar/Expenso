@@ -22,3 +22,7 @@ export const Expenses = z.object({
     cost : z.number(),
     groupMemberId: z.string()
 })
+
+export const Friend = z.object({
+    number: z.string().refine(validator.isMobilePhone)
+})
